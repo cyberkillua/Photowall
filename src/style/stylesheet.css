@@ -58,7 +58,7 @@ h1 {
   justify-content: center;
 }
 
-.button {
+button {
   border: 2px solid #f2f2f2;
   background: none;
   flex-basis: 48%;
@@ -69,4 +69,57 @@ h1 {
   text-align: center;
   font-size: 15px;
   color: red;
+  transition: all 0.2s;
+  box-sizing: padding-box;
+}
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  border-color: #00f;
+  outline: 0;
+}
+.addIcon {
+  background: url("https://image.flaticon.com/icons/svg/60/60740.svg") center
+    no-repeat;
+  background-size: contain;
+  padding: 40px;
+  display: table;
+  margin: 20px auto;
+  border: none;
+}
+.form {
+  width: 360px;
+  padding: 0 0 0;
+  margin: auto;
+}
+.form input {
+  font-family: sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #065784;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #7b8589;
 }
