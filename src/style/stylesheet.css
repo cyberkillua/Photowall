@@ -16,7 +16,10 @@ h1 {
   color: black;
   text-decoration: none;
 }
-
+h1 a {
+  text-decoration: none;
+  color: black;
+}
 @font-face {
   font-family: "billabongregular";
   src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot");
