@@ -10,18 +10,19 @@ class Addphoto extends Component {
     const imageLink = event.target.elements.Link.value;
     const description = event.target.elements.description.value;
     const post = {
-      id: "0",
+      id: Number(new Date()),
       description: description,
       imageLink: imageLink,
     };
     if (description && imageLink) {
-      this.props.onAddPhoto(post);
+      this.props.addPost(post)
+      this.props.history.push('/')
     }
   }
   render() {
     return (
       <div>
-        <h1>Photowall</h1>
+        
         <div>
           <form className="form" onSubmit={this.getStuff}>
             <input type="text" placeholder="Link" name="Link" />
