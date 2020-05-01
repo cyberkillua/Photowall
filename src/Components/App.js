@@ -3,9 +3,11 @@ import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import * as actionCreators from "../redux/actions"
 import {withRouter } from "react-router"
+
 function mapStateToProps(state){
     return {
-        posts: state
+        posts: state.posts,
+        comments: state.comments
     }
 }
 function mapDispatchToProps(dispatch){
