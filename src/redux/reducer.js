@@ -11,7 +11,7 @@ function comments(state = {}, action) {
     }else {
       return {...state, [action.postID]: [...state[action.postID], action.comment]}
     }
-      
+     case "LOAD_COMMENT": return action.comments 
     default:
       return state;
   }
@@ -27,6 +27,7 @@ function posts(state = _posts, action) {
       ];
     case "ADD_POST":
       return [...state, action.post];
+    case "LOAD_POST": return action.posts 
     default:
       return state;
   }
