@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Title from "./Title";
 import Photowall from "./Photowall";
 import Addphoto from "./Addphoto";
 import { Route, Link } from "react-router-dom";
