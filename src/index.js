@@ -2,11 +2,14 @@ import React from "react";
 import ReactDom from "react-dom";
 import "./style/stylesheet.css";
 import { BrowserRouter } from "react-router-dom";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import rootReducers from "./redux/reducer";
 import { Provider } from "react-redux";
 import App from "./Components/App";
-const store = createStore(rootReducers);
+import thunk from "redux-thunk";
+import { database } from "./database/config";
+
+const store = createStore(rootReducers, applyMiddleware(thunk));
 
 ReactDom.render(
   <Provider store={store}>
